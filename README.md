@@ -24,48 +24,48 @@ This project is a modular, automated device test platform that supports users to
 
 ## System module architecture
 
-1. GUI.py
+# GUI.py
 
-用戶介面，輸入測試機序號、選擇測試項目
+User interface, input the test machine serial number, select the test project
 
-執行控制流程啟動
+Execute the control process to start
 
-2. Process_Control_0212.py
+# Process_Control.py
 
-核心主控邏輯
+Core main control logic
 
-載入 test plan、逐項執行命令
+Load the test plan, execute the command item by item
 
-驅動通訊與資料比對模組
+Drive the communication and data comparison module
 
-3. Command_Line_0212.yml
+# Command_Line.yml
 
-定義各種可測試命令、預期回應與條件驗證
+Define various testable commands, expected responses and conditional verification
 
-4. Test_Case.yml / Test_Plan_List.yml
+# Test_Case.yml / Test_Plan_List.yml
 
-定義測試組合，如 Smoke Test、Regression Test 等
+Define test combinations, such as Smoke Test, Regression Test, etc.
 
-每個測試計畫對應指令步驟清單
+List of command steps for each test plan
 
-5. UART_communication_0211.py
+# UART_communication.py
 
-串接 UART 傳送與接收封包
+Serial UART transmission and reception of packets
 
-封裝 send/receive 基本操作
+Encapsulate send/receive basic operations
 
-6. Serial_Port_Monitoring_0212.py
+# Serial_Port_Monitoring.py
 
-背景持續監聽 UART 接收資料
+Background continuous monitoring of UART receiving data
 
-用於異步事件與延遲回應的支援
+Support for asynchronous events and delayed responses
 
-7. Conditional_0212.py
+# Conditional.py
 
-根據 command 設定條件驗證回應資料（格式、比對、範圍）
+Verify the response data (format, comparison, range) according to the command setting conditions
 
-8. Statistic_0212.py
+# Statistic.py
 
-紀錄測試步驟、統計結果
+Record test steps and statistical results
 
-可擴充輸出報表格式（CSV / TXT）
+Extensible output report format (CSV / TXT)
